@@ -241,7 +241,21 @@ $(document).ready(function() {
             scrollTop: $('.lead').offset().top
         }, 800);
     });
+
+    $('.invest__details-btn').on('click', function(e) {
+        e.preventDefault();
+        const target = $('.lead');
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 800);
+        }
+    });
 });
+
+
+
+
 
 Fancybox.bind("[data-fancybox]", {
     Hash: false,
