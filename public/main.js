@@ -171,6 +171,7 @@ document.querySelectorAll('.project__one-btn').forEach((btn, index) => {
         const shortText = textBox.getAttribute('data-short-text');
         const secondBlock = projectCard.querySelector('.project__second-block');
         const call_manager = projectCard.querySelector('#call_manager');
+        const call_manager_second = projectCard.querySelector('#call_manager_second');
         const second_item = projectCard.querySelector('.project__second-item');
 
         const staticImg = projectCard.querySelector('.project-static-img');
@@ -179,6 +180,7 @@ document.querySelectorAll('.project__one-btn').forEach((btn, index) => {
         projectCard.classList.toggle('is-expanded');
         if (secondBlock) secondBlock.classList.toggle('column');
         if (call_manager) call_manager.classList.toggle('hidden');
+        if (call_manager_second) call_manager_second.classList.toggle('hidden');
 
         if (projectCard.classList.contains('is-expanded')) {
             textBox.innerHTML = projectDescriptions[projectId] || projectDescriptions.project1;
@@ -217,5 +219,26 @@ document.querySelectorAll('.project__one-btn').forEach((btn, index) => {
                 btn.swiperInstance = null;
             }
         }
+    });
+});
+
+$(document).ready(function() {
+    $('#call_manager_second').on('click', function(e) {
+        e.preventDefault();
+
+        const target = $('.lead');
+
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 800);
+        }
+    });
+
+    $('#call_manager').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('.lead').offset().top
+        }, 800);
     });
 });
