@@ -242,3 +242,11 @@ $(document).ready(function() {
         }, 800);
     });
 });
+
+Fancybox.bind("[data-fancybox]", {
+    Hash: false,
+    Thumbs: {
+        autoStart: false,
+    },
+    Infinite: true,
+});
