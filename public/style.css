@@ -617,7 +617,7 @@ body {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .how__itword-title {
         line-height: 45px;
     }
@@ -654,8 +654,20 @@ body {
         font-size: 18px;
     }
     .lead__card {
-     width: 390px;
+     width: 100%;
      border-radius: unset;
+    }
+}
+
+@media (max-width: 500px) {
+    .project-slider .swiper-slide img {
+        height: 220px;
+        width: 290px;
+    }
+    .lead__agree {
+        text-align: left;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 }
 
