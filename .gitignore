@@ -1,0 +1,18 @@
+# Системные файлы Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Временные файлы редакторов (VS Code, WebStorm и др.)
+.vscode/
+.idea/
+*.swp
+*.log
+
+# Файлы OpenServer (если вдруг попадут в папку проекта)
+.osp/
+*.tmp
+
+# Прочее
+.DS_Store
+node_modules/
