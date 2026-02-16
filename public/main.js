@@ -7,9 +7,9 @@ $(function () {
         wrapAround: true,
         imagesLoaded: true,
         draggable: true,
-        autoPlay: 3000,
-        pauseAutoPlayOnHover: true,
-        selectedAttraction: 0.01, // Чем меньше, тем медленнее притягивается (плавнее)
+        // autoPlay: 3000,
+        // pauseAutoPlayOnHover: true,
+        selectedAttraction: 0.01,
         friction: 0.15
         // ----------------------------
     });
