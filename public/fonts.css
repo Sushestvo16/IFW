@@ -3,7 +3,7 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(/public/fonts/Gill_Sans_Bold.otf);
+    src: url(./public/fonts/Gill_Sans_Bold.otf);
 }
 
 @font-face {
@@ -11,7 +11,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(/public/fonts/Actay-Regular.otf);
+    src: url(./public/fonts/Actay-Regular.otf);
 }
 
 @font-face {
@@ -19,5 +19,5 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(/public/fonts/ActayWide-Bold.otf);
+    src: url(./public/fonts/ActayWide-Bold.otf);
 }
