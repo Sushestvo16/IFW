@@ -5,7 +5,13 @@ $(function () {
         prevNextButtons: false,
         pageDots: true,
         wrapAround: true,
-        imagesLoaded: true
+        imagesLoaded: true,
+        draggable: true,
+        autoPlay: 3000,
+        pauseAutoPlayOnHover: true,
+        selectedAttraction: 0.01, // Чем меньше, тем медленнее притягивается (плавнее)
+        friction: 0.15
+        // ----------------------------
     });
 
     const flkty = $carousel.data('flickity');
@@ -28,7 +34,6 @@ $(function () {
 
         setActivePlan(planKey);
     }
-
 
     updateFromSelected();
 

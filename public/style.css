@@ -618,6 +618,9 @@ body {
 }
 
 @media (max-width: 767px) {
+    .how__itword-title {
+        line-height: 45px;
+    }
     .container__ifw {
         padding: 0 20px;
     }
@@ -644,11 +647,15 @@ body {
     }
 
     .project__second-block {
-        flex-display: column;;
+        flex-direction: column;;
     }
 
     .lead__desc {
         font-size: 18px;
+    }
+    .lead__card {
+     width: 390px;
+     border-radius: unset;
     }
 }
 
