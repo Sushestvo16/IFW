@@ -47,6 +47,7 @@ body {
     border-radius: 100px;
     font-size: 20px;
     border: none;
+    text-align: center;
 }
 
 .btn:hover {
@@ -127,6 +128,7 @@ body {
 .invest__carousel-wrap {
     max-width: 1440px;
     margin: 0 auto;
+    position: relative;
 }
 
 
@@ -142,6 +144,27 @@ body {
     width: 372px;
     height: 585px;
     margin: 0 12px; /* gap 24 */
+}
+
+.invest__carousel-wrap::before,
+.invest__carousel-wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 660px;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.invest__carousel-wrap::before {
+    left: 0;
+    background: linear-gradient(to right, #29292B 15%, rgba(41, 41, 43, 0) 100%);
+}
+
+.invest__carousel-wrap::after {
+    right: 0;
+    background: linear-gradient(to left, #29292B 15%, rgba(41, 41, 43, 0) 100%);
 }
 
 .invest__carousel .invest__card img {
@@ -561,6 +584,7 @@ body {
 
 .dot.is-selected {
     background: var(--purple);
+    border-radius: 10px;
 }
 
 @media (max-width: 1200px) {
