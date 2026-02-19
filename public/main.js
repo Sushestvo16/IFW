@@ -41,13 +41,13 @@ $(function () {
         updateFromSelected();
     });
     // Клік на карточку
-    $('.invest__card').on('click', function(event) {
-        const planKey = $(this).attr('data-plan');
-        const index = $('.invest__card').index(this);
-        flkty.select(index);
-        setActivePlan(planKey);
-        event.preventDefault();
-    });
+    // $('.invest__card').on('click', function(event) {
+    //     const planKey = $(this).attr('data-plan');
+    //     const index = $('.invest__card').index(this);
+    //     flkty.select(index);
+    //     setActivePlan(planKey);
+    //     event.preventDefault();
+    // });
 
 });
 
