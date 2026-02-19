@@ -359,7 +359,7 @@ body {
 }
 
 .project__second-block.column {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-end;
 }
 
