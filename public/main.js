@@ -40,16 +40,25 @@ $(function () {
     $carousel.on('select.flickity', function () {
         updateFromSelected();
     });
+    // Клік на карточку
+    $('.invest__card').on('click', function(event) {
+        const planKey = $(this).attr('data-plan');
+        const index = $('.invest__card').index(this);
+        flkty.select(index);
+        setActivePlan(planKey);
+        event.preventDefault();
+    });
 
 });
 
+// Form + Validation
 const form = document.getElementById('leadForm');
 const submitBtn = document.getElementById('submitBtn');
 
 function checkFormValidity() {
     const name = form.querySelector('[name="name"]').value.trim();
     const phone = form.querySelector('[name="phone"]').value.trim();
-    const phoneRegex = /^\+?\d{10,15}$/;
+    const phoneRegex = /^\+?\d{1,3}?[\s-]?\(?\d{2,3}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
     const isAgree = form.querySelector('[name="agree"]').checked;
 
     const isValid = name.length > 0 && phoneRegex.test(phone) && isAgree;
@@ -134,6 +143,10 @@ form.addEventListener('submit', function (e) {
     console.log(JSON.stringify(data, null, 2));
 
 });
+
+
+
+// Vertical slider card + some functional for card IN PROJECT
 let projectSwiper = null;
 const projectDescriptions = {
     project1: `
@@ -237,6 +250,7 @@ document.querySelectorAll('.project__one-btn').forEach((btn, index) => {
     });
 });
 
+// Клік по кнопці щоб спусттитись до форми
 $(document).ready(function() {
     $('#call_manager_second').on('click', function(e) {
         e.preventDefault();
@@ -271,7 +285,7 @@ $(document).ready(function() {
 
 
 
-
+// Fancybox initialization
 Fancybox.bind("[data-fancybox]", {
     Hash: false,
     Thumbs: {
